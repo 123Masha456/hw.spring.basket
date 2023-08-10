@@ -5,18 +5,21 @@ import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
 @SessionScope
 public class Basket {
     private List<Long> items;
 
-    public Basket(){
+    public Basket() {
         items = new ArrayList<>();
     }
-    public void add(Long item){
+
+    public void add(Long item) {
         items.add(item);
     }
-    public List<Long> getItems(){
+
+    public List<Long> getItems() {
         return items;
     }
 }
